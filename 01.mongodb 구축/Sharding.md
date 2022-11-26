@@ -6,7 +6,7 @@ MongoDB 접속 없이 shell을 실행한다.
 
 
 ```javascript
-MongoRunner.dataPath = "/Users/user/fastcampus/mongodb/shardData/"
+MongoRunner.dataPath = "/Users/seol/fastcampus/mongodb/shardData/"
 
 st = ShardingTest({
 	name: "test-shard",

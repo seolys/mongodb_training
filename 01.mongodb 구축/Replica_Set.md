@@ -35,9 +35,9 @@ cd mongodb-macos-x86_64-5.0.12
 cd bin
 
 # 각각 다른 터미널에서 실행한다.
-mongod --replSet rs1 --port 27017 --bind_ip "0.0.0.0" --dbpath /Users/user/mongodb/data1  --oplogSize 128
-mongod --replSet rs1 --port 27018 --bind_ip "0.0.0.0" --dbpath /Users/user/mongodb/data2  --oplogSize 128
-mongod --replSet rs1 --port 27019 --bind_ip "0.0.0.0" --dbpath /Users/user/mongodb/data3  --oplogSize 128
+mongod --replSet rs1 --port 27017 --bind_ip "0.0.0.0" --dbpath /Users/seol/mongodb/data1  --oplogSize 128
+mongod --replSet rs1 --port 27018 --bind_ip "0.0.0.0" --dbpath /Users/seol/mongodb/data2  --oplogSize 128
+mongod --replSet rs1 --port 27019 --bind_ip "0.0.0.0" --dbpath /Users/seol/mongodb/data3  --oplogSize 128
 ```
 
 ### 실행 방법2. Config File 이용
@@ -56,7 +56,7 @@ net:
     bindIp: 0.0.0.0
 
 storage:
-    dbPath: "/Users/user/mongodb/data1"
+    dbPath: "/Users/seol/mongodb/data1"
     directoryPerDB: true
 
 replication:
@@ -64,7 +64,7 @@ replication:
     replSetName: "rs1"
 
 systemLog:
-    path: "/Users/user/mongodb/logs/mongod1.log"
+    path: "/Users/seol/mongodb/logs/mongod1.log"
     destination: "file"
 ```
 
@@ -76,7 +76,7 @@ net:
     bindIp: 0.0.0.0
 
 storage:
-    dbPath: "/Users/user/mongodb/data2"
+    dbPath: "/Users/seol/mongodb/data2"
     directoryPerDB: true
 
 replication:
@@ -84,7 +84,7 @@ replication:
     replSetName: "rs1"
 
 systemLog:
-    path: "/Users/user/mongodb/logs/mongod2.log"
+    path: "/Users/seol/mongodb/logs/mongod2.log"
     destination: "file"
 ```
 
@@ -96,7 +96,7 @@ net:
     bindIp: 0.0.0.0
 
 storage:
-    dbPath: "/Users/user/mongodb/data3"
+    dbPath: "/Users/seol/mongodb/data3"
     directoryPerDB: true
 
 replication:
@@ -104,7 +104,7 @@ replication:
     replSetName: "rs1"
 
 systemLog:
-    path: "/Users/user/mongodb/logs/mongod3.log"
+    path: "/Users/seol/mongodb/logs/mongod3.log"
     destination: "file"
 ```
 
@@ -114,9 +114,9 @@ cd mongodb-macos-x86_64-5.0.12
 cd bin
 
 # 각각 다른 터미널에서 실행한다.
-./mongod -f /Users/user/mongodb/config/mongod1.conf
-./mongod -f /Users/user/mongodb/config/mongod2.conf
-./mongod -f /Users/user/mongodb/config/mongod3.conf
+./mongod -f /Users/seol/mongodb/config/mongod1.conf
+./mongod -f /Users/seol/mongodb/config/mongod2.conf
+./mongod -f /Users/seol/mongodb/config/mongod3.conf
 ```
 
 ### Replica Set Initiate
